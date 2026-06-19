@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,45 +9,73 @@
 
 <body>
 
-<h1>Enquiries</h1>
+<header>
+    <h1>🌿 Enquiries</h1>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="services.html">Services</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="enquiries.html">Enquiries</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="enquiries.html">Enquiries</a>
+    </nav>
+</header>
 
-<div class="bubble-one">
+<main>
+    <div class="bubble-one">
 
-<form id="enquiryForm">
+        <h2>Book a Consultation or Ask a Question</h2>
 
-<label for="name">Full Name</label><br>
-<input type="text" id="name" placeholder="Enter your full name"><br><br>
+        <form id="enquiryForm" method="post">
 
+            <label for="name">Full Name</label><br>
+            <input 
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required>
+            <br><br>
 
-<label for="email">Email</label><br>
-<input type="email" id="email" placeholder="Enter your email"><br><br>
+            <label for="email">Email</label><br>
+            <input 
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required>
+            <br><br>
 
+            <label for="service">Service Interested In</label><br>
+            <input 
+                type="text"
+                id="service"
+                name="service"
+                placeholder="Hair treatment, consultation, etc."
+                autocomplete="off"
+                required>
+            <br><br>
 
-<label for="service">Service Interested In</label><br>
-<input type="text" id="service" placeholder="Hair treatment, consultation, etc."><br><br>
+            <label for="message">Your Message</label><br>
+            <textarea 
+                id="message"
+                name="message"
+                placeholder="Type your message here"
+                maxlength="500"
+                required></textarea>
+            <br><br>
 
+            <input type="submit" value="Submit Enquiry">
 
-<label for="message">Your Message</label><br>
-<textarea id="message" placeholder="Type your message here"></textarea><br><br>
+            <!-- JavaScript displays errors or success here -->
+            <p id="responseMessage"></p>
 
+        </form>
 
-<input type="submit" value="Submit Enquiry">
-
-
-<p id="responseMessage"></p>
-
-</form>
-
-</div>
-
+    </div>
+</main>
 
 <hr>
 
@@ -55,7 +83,7 @@
     <p>🌿 Rooted 4 U Original</p>
 </footer>
 
-
+<!-- JavaScript File -->
 <script src="js/script.js"></script>
 
 </body>
