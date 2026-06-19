@@ -1,55 +1,62 @@
     <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Rooted 4 U | Enquiries</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Enquiries</h1>
+<h1>Enquiries</h1>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="services.html">Services</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="enquiries.html">Enquiries</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="services.html">Services</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="enquiries.html">Enquiries</a>
+</nav>
 
-    <div class="bubble-one">
+<div class="bubble-one">
 
-        <form>
+<form id="enquiryForm">
 
-            <label>FULL NAME</label><br>
-            <input type="text" name="name"><br><br>
+<label for="name">Full Name</label><br>
+<input type="text" id="name" placeholder="Enter your full name"><br><br>
 
-            <label>Email</label><br>
-            <input type="email" name="email"><br><br>
 
-            <label>Service Interested In</label><br>
-            <input type="text" name="service"><br><br>
+<label for="email">Email</label><br>
+<input type="email" id="email" placeholder="Enter your email"><br><br>
 
-            <label>Your Message</label><br>
-            <textarea name="message"></textarea><br><br>
 
-            <input type="submit" value="Submit">
+<label for="service">Service Interested In</label><br>
+<input type="text" id="service" placeholder="Hair treatment, consultation, etc."><br><br>
 
-        </form>
 
-    </div>
+<label for="message">Your Message</label><br>
+<textarea id="message" placeholder="Type your message here"></textarea><br><br>
 
-    <hr>
 
-    <footer>
-        <p>Rooted 4 U Original</p>
-    </footer>
+<input type="submit" value="Submit Enquiry">
 
-    <hr>
+
+<p id="responseMessage"></p>
+
+</form>
+
+</div>
+
+
+<hr>
+
+<footer>
+    <p>🌿 Rooted 4 U Original</p>
+</footer>
+
+
+<script src="js/script.js"></script>
 
 </body>
-
 </html>

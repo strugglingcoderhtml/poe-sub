@@ -340,6 +340,37 @@ footer {
     }
 }
 
+#responseMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2e6b3b;
+    text-align: center;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+#counter {
+    font-size: 12px;
+    color: #555;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+input,
+textarea {
+    transition: 0.3s ease;
+}
+
 /* Footer */
 footer {
     background-color: #5c4033;
@@ -355,5 +386,80 @@ hr {
     border: none;
     height: 2px;
     background-color: #6b7a3a;
+
 }
-```
+
+// Rooted 4 U Contact Page Functionality
+
+
+// Welcome message based on time
+const welcome = document.getElementById("welcomeMessage");
+
+let hour = new Date().getHours();
+
+if (hour < 12) {
+    welcome.textContent =
+    "🌞 Good morning! The Rooted 4 U team is happy to assist you today.";
+}
+
+else if (hour < 18) {
+    welcome.textContent =
+    "🌿 Good afternoon! Contact us for all your natural hair care needs.";
+}
+
+else {
+    welcome.textContent =
+    "🌙 Good evening! Leave us a message and we will respond as soon as possible.";
+}
+
+
+// Business hours checker
+const status = document.getElementById("businessStatus");
+
+if (hour >= 8 && hour < 17) {
+    status.textContent = "🟢 We are currently OPEN (08:00 - 17:00)";
+    status.style.color = "green";
+}
+
+else {
+    status.textContent = "🔴 We are currently CLOSED. Our working hours are 08:00 - 17:00.";
+    status.style.color = "red";
+}
+
+
+// Contact functions
+
+function sendEmail() {
+    window.location.href =
+    "mailto:rooted4u@gmail.com?subject=Rooted 4 U Enquiry";
+}
+
+
+function callUs() {
+    window.location.href =
+    "tel:+27676767677";
+}
+
+
+function openTikTok() {
+    window.open(
+        "https://www.tiktok.com/@rooted4_u",
+        "_blank"
+    );
+}
+
+
+function openInstagram() {
+    window.open(
+        "https://www.instagram.com/rooted4u_",
+        "_blank"
+    );
+}
+
+
+function openLocation() {
+    window.open(
+        "https://www.google.com/maps",
+        "_blank"
+    );
+}
